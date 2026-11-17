@@ -1,0 +1,16 @@
+Real project files used by the unit tests (not shipped in the vsix). All MIT licensed.
+
+kingfisher.pbxproj   https://github.com/onevcat/Kingfisher/blob/21caad71af5d1cb34ab174786e75c864fd2417bd/Kingfisher.xcodeproj/project.pbxproj (MIT, Copyright (c) 2019 Wei Wang)
+netnewswire.pbxproj  https://github.com/Ranchero-Software/NetNewsWire/blob/76ba069e21376075e482374f1a033cd72ffdf4dc/NetNewsWire.xcodeproj/project.pbxproj (MIT, Copyright (c) 2002-2025 Brent Simmons)
+
+Merge conflicts rebuilt from real Kingfisher history (MIT): for a merge commit, the file at both parents and at their
+merge base, merged with `git merge-file` (and `git merge-file --diff3` for the *.conflict-diff3.pbxproj files).
+*.author.pbxproj is the file the Kingfisher authors committed in that merge.
+
+kf-merge-e542.*  merge e542964e463a2c9eccf3fc48babcb6cab095a485 "Merge branch 'master' into v8":
+                 current b3b7c2342380883369782b7587c21e492b9b2cff, incoming ac3268e519bd81c333ce7a8d69d56ab66081fa60,
+                 base 2a931064066428d260790c46f238030180c866ef. Both sides added a Swift file (3 conflict blocks).
+                 .base and .ours are the base and current versions (used by the comparison tests).
+kf-merge-3a46.*  merge 3a46b0cd784ab430b0eb178ead8d3572c120930d "Merge branch 'master' into v8":
+                 current 36fae63d6d4f1ad08b6c0d8fa2cf750b5db9bf17, incoming 277f1ab2c6664b19b4a412e32b094b201e2d5757,
+                 base 7e89cf95dfa132ea7d02b405b9888dd851ec7de0. Build settings changed on both sides (3 blocks).

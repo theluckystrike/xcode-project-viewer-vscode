@@ -1,0 +1,304 @@
+{
+  "name": "zovo-xcode-project-viewer",
+  "displayName": "Xcode Project Viewer (pbxproj)",
+  "description": "Xcode project viewer for VS Code: open project.pbxproj as targets, build phases, files and groups, build settings with inherited values and Swift packages, instead of thousands of lines of ids. Broken references flagged. Read-only, offline, works on Linux and Windows without Xcode.",
+  "version": "0.1.1",
+  "publisher": "zovo",
+  "license": "MIT",
+  "icon": "icon.png",
+  "galleryBanner": {
+    "color": "#1E2A3A",
+    "theme": "dark"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/theluckystrike/xcode-project-viewer-vscode"
+  },
+  "bugs": {
+    "url": "https://github.com/theluckystrike/xcode-project-viewer-vscode/issues"
+  },
+  "homepage": "https://github.com/theluckystrike/xcode-project-viewer-vscode#readme",
+  "engines": {
+    "vscode": "^1.75.0"
+  },
+  "categories": [
+    "Visualization",
+    "Other"
+  ],
+  "keywords": [
+    "xcode",
+    "pbxproj",
+    "ios",
+    "swift",
+    "xcodeproj"
+  ],
+  "main": "./src/extension.js",
+  "activationEvents": [
+    "onUri"
+  ],
+  "capabilities": {
+    "untrustedWorkspaces": {
+      "supported": true
+    },
+    "virtualWorkspaces": true
+  },
+  "contributes": {
+    "customEditors": [
+      {
+        "viewType": "xcodeProj.viewer",
+        "displayName": "Xcode Project Viewer",
+        "selector": [
+          {
+            "filenamePattern": "*.pbxproj"
+          }
+        ],
+        "priority": "option"
+      }
+    ],
+    "commands": [
+      {
+        "command": "xcodeProj.openWithViewer",
+        "title": "Open Xcode Project Viewer",
+        "category": "Xcode Project",
+        "icon": "$(list-tree)"
+      },
+      {
+        "command": "xcodeProj.openAsText",
+        "title": "Open as Text",
+        "category": "Xcode Project",
+        "icon": "$(file-code)"
+      },
+      {
+        "command": "xcodeProj.openSample",
+        "title": "Open the Sample Project",
+        "category": "Xcode Project"
+      },
+      {
+        "command": "xcodeProj.openWalkthrough",
+        "title": "Get Started",
+        "category": "Xcode Project"
+      },
+      {
+        "command": "xcodeProj.moreViewers",
+        "title": "More free tools by Zovo",
+        "category": "Xcode Project"
+      },
+      {
+        "command": "xcodeProj.supportDeveloper",
+        "title": "Support the developer",
+        "category": "Xcode Project"
+      },
+      {
+        "command": "xcodeProj.mergeHelper",
+        "title": "Merge Conflict Helper (Pro)",
+        "category": "Xcode Project",
+        "icon": "$(git-merge)"
+      },
+      {
+        "command": "xcodeProj.compare",
+        "title": "Compare Two Project Versions (Pro)",
+        "category": "Xcode Project",
+        "icon": "$(diff)"
+      },
+      {
+        "command": "xcodeProj.buildSettings",
+        "title": "Build Settings Export and Compare (Pro)",
+        "category": "Xcode Project",
+        "icon": "$(table)"
+      },
+      {
+        "command": "xcodeProj.zovoPro.merge",
+        "title": "Zovo Pro: Merge conflict helper"
+      },
+      {
+        "command": "xcodeProj.zovoPro.compare",
+        "title": "Zovo Pro: Compare two project versions"
+      },
+      {
+        "command": "xcodeProj.zovoPro.settings",
+        "title": "Zovo Pro: Build settings export and compare"
+      },
+      {
+        "command": "xcodeProj.getPro",
+        "title": "Get Zovo Pro (USD 19 once, all Zovo extensions)",
+        "category": "Zovo Pro"
+      },
+      {
+        "command": "xcodeProj.payWithPayPal",
+        "title": "Pay for Zovo Pro with PayPal (USD 19, team of 5 USD 59)",
+        "category": "Zovo Pro"
+      },
+      {
+        "command": "xcodeProj.unlockWithSponsors",
+        "title": "I already paid: unlock with GitHub Sponsors",
+        "category": "Zovo Pro"
+      },
+      {
+        "command": "xcodeProj.enterLicenseKey",
+        "title": "Enter Zovo Pro license key",
+        "category": "Zovo Pro"
+      },
+      {
+        "command": "xcodeProj.removeLicense",
+        "title": "Remove Zovo Pro from this editor",
+        "category": "Zovo Pro"
+      },
+      {
+        "command": "xcodeProj.payByCard",
+        "title": "Pay for Zovo Pro by card (USD 19)",
+        "category": "Zovo Pro"
+      },
+      {
+        "command": "xcodeProj.enterKey",
+        "title": "Enter a key",
+        "category": "Zovo Pro"
+      }
+    ],
+    "menus": {
+      "editor/title": [
+        {
+          "command": "xcodeProj.openAsText",
+          "when": "activeCustomEditorId == 'xcodeProj.viewer'",
+          "group": "navigation@1"
+        },
+        {
+          "command": "xcodeProj.openWithViewer",
+          "when": "resourceFilename =~ /\\.pbxproj$/i && activeEditor == workbench.editors.files.textFileEditor",
+          "group": "navigation@9"
+        },
+        {
+          "command": "xcodeProj.mergeHelper",
+          "when": "(activeCustomEditorId == 'xcodeProj.viewer' || resourceFilename =~ /\\.pbxproj$/i && activeEditor == workbench.editors.files.textFileEditor) && config.xcodeProj.showProTools",
+          "group": "1_xc@1"
+        },
+        {
+          "command": "xcodeProj.compare",
+          "when": "(activeCustomEditorId == 'xcodeProj.viewer' || resourceFilename =~ /\\.pbxproj$/i && activeEditor == workbench.editors.files.textFileEditor) && config.xcodeProj.showProTools",
+          "group": "1_xc@2"
+        },
+        {
+          "command": "xcodeProj.buildSettings",
+          "when": "(activeCustomEditorId == 'xcodeProj.viewer' || resourceFilename =~ /\\.pbxproj$/i && activeEditor == workbench.editors.files.textFileEditor) && config.xcodeProj.showProTools",
+          "group": "1_xc@3"
+        }
+      ],
+      "explorer/context": [
+        {
+          "command": "xcodeProj.openWithViewer",
+          "when": "(resourceFilename =~ /\\.pbxproj$/i && !explorerResourceIsFolder || resourceFilename =~ /\\.xcodeproj$/i && explorerResourceIsFolder)",
+          "group": "navigation@9"
+        },
+        {
+          "command": "xcodeProj.zovoPro.merge",
+          "when": "(resourceFilename =~ /\\.pbxproj$/i && !explorerResourceIsFolder || resourceFilename =~ /\\.xcodeproj$/i && explorerResourceIsFolder) && config.xcodeProj.showProTools",
+          "group": "zovoPro@1"
+        },
+        {
+          "command": "xcodeProj.zovoPro.compare",
+          "when": "(resourceFilename =~ /\\.pbxproj$/i && !explorerResourceIsFolder || resourceFilename =~ /\\.xcodeproj$/i && explorerResourceIsFolder) && config.xcodeProj.showProTools",
+          "group": "zovoPro@2"
+        },
+        {
+          "command": "xcodeProj.zovoPro.settings",
+          "when": "(resourceFilename =~ /\\.pbxproj$/i && !explorerResourceIsFolder || resourceFilename =~ /\\.xcodeproj$/i && explorerResourceIsFolder) && config.xcodeProj.showProTools",
+          "group": "zovoPro@3"
+        }
+      ],
+      "commandPalette": [
+        {
+          "command": "xcodeProj.mergeHelper",
+          "when": "config.xcodeProj.showProTools"
+        },
+        {
+          "command": "xcodeProj.compare",
+          "when": "config.xcodeProj.showProTools"
+        },
+        {
+          "command": "xcodeProj.buildSettings",
+          "when": "config.xcodeProj.showProTools"
+        },
+        {
+          "command": "xcodeProj.zovoPro.merge",
+          "when": "false"
+        },
+        {
+          "command": "xcodeProj.zovoPro.compare",
+          "when": "false"
+        },
+        {
+          "command": "xcodeProj.zovoPro.settings",
+          "when": "false"
+        },
+        {
+          "command": "xcodeProj.openAsText",
+          "when": "activeCustomEditorId == 'xcodeProj.viewer'"
+        }
+      ]
+    },
+    "configuration": {
+      "title": "Xcode Project Viewer",
+      "properties": {
+        "xcodeProj.showProTools": {
+          "type": "boolean",
+          "default": true,
+          "description": "Show the Zovo Pro tools (merge conflict helper, compare two project versions, build settings export and compare) in the Command Palette, the Explorer menu, the editor title menu and the viewer toolbar. Everything free stays visible."
+        },
+        "xcodeProj.askForRating": {
+          "type": "boolean",
+          "default": true,
+          "description": "Ask once for a Marketplace rating after projects opened without an error on two occasions at least 30 minutes apart. \"Later\" asks one more time after 7 days, \"No thanks\" never asks again. Nothing is sent anywhere."
+        },
+        "xcodeProj.showSupportLinks": {
+          "type": "boolean",
+          "default": true,
+          "description": "Show the small Rate, More free tools and Zovo Pro links at the bottom of the viewer. Nothing is sent anywhere."
+        }
+      }
+    },
+    "walkthroughs": [
+      {
+        "id": "xcodeProj.start",
+        "title": "Get started with the Xcode Project Viewer",
+        "description": "Read project.pbxproj as a project in VS Code: targets, files, build settings and packages.",
+        "steps": [
+          {
+            "id": "open",
+            "title": "Open a project.pbxproj",
+            "description": "Open the project.pbxproj inside a .xcodeproj folder and click the Open Xcode Project Viewer button in the editor title, or right-click the file or the .xcodeproj folder in the Explorer. The text editor stays the default, so merges and edits work as before.\n[Open the sample project](command:xcodeProj.openSample)",
+            "media": {
+              "image": "images/screenshot.png",
+              "altText": "An iOS project open in VS Code: the target list, the build phases of the app target with their files, and the project facts."
+            },
+            "completionEvents": [
+              "onCommand:xcodeProj.openSample"
+            ]
+          },
+          {
+            "id": "settings",
+            "title": "Build settings and broken references",
+            "description": "The Build Settings tab shows each setting of a target and configuration with the level that sets it and $(inherited) resolved. The Warnings tab lists files missing on disk and objects that point to removed ids. A click on any row opens its line in the text.",
+            "media": {
+              "markdown": "walkthrough/settings.md"
+            }
+          },
+          {
+            "id": "zovo-related",
+            "title": "Tools that often go with Xcode projects",
+            "description": "These free Zovo extensions open other files of an app project. A link opens the extension page, and you choose there whether to install it.\n[Git Commit Graph](command:extension.open?%5B%22zovo.zovo-git-commit-graph%22%5D)\n[SVG Preview & Viewer](command:extension.open?%5B%22zovo.zovo-svg-viewer%22%5D)\n[JSON Tree Viewer](command:extension.open?%5B%22zovo.zovo-json-tree-viewer%22%5D)",
+            "media": {
+              "markdown": "walkthrough/related.md"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "scripts": {
+    "test": "node scripts/test.js",
+    "package": "npx -y @vscode/vsce@3 package --no-dependencies"
+  },
+  "devDependencies": {},
+  "sponsor": {
+    "url": "https://github.com/sponsors/theluckystrike/sponsorships?tier_id=679878"
+  }
+}

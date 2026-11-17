@@ -1,0 +1,4 @@
+#include "Base.xcconfig"
+
+SWIFT_OPTIMIZATION_LEVEL = -O
+OTHER_SWIFT_FLAGS = $(inherited) -enforce-exclusivity=checked

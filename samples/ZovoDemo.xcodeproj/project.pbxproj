@@ -1,0 +1,551 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 60;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A0D0E000000000000000001B /* ZovoDemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D0E0000000000000000001 /* ZovoDemoApp.swift */; };
+		A0D0E000000000000000001C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D0E0000000000000000002 /* ContentView.swift */; };
+		A0D0E000000000000000001D /* TripStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D0E0000000000000000003 /* TripStore.swift */; };
+		A0D0E000000000000000001E /* OldHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D0E0000000000000000007 /* OldHelper.swift */; };
+		A0D0E0000000000000000020 /* OrderedCollections in Frameworks */ = {isa = PBXBuildFile; productRef = A0D0E000000000000000001A /* OrderedCollections */; };
+		A0D0E0000000000000000022 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0D0E0000000000000000004 /* Assets.xcassets */; };
+		A0D0E0000000000000000024 /* ZovoDemoWidget.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = A0D0E000000000000000000F /* ZovoDemoWidget.appex */; settings = { ATTRIBUTES = ( RemoveHeadersOnCopy, ); }; };
+		A0D0E0000000000000000027 /* TripWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D0E0000000000000000008 /* TripWidget.swift */; };
+		A0D0E0000000000000000028 /* TripStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D0E0000000000000000003 /* TripStore.swift */; };
+		A0D0E000000000000000002A /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0D0E000000000000000000D /* WidgetKit.framework */; };
+		A0D0E000000000000000002D /* TripStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D0E000000000000000000A /* TripStoreTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A0D0E0000000000000000104 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A0D0E0000000000000000F00 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A0D0E0000000000000000101;
+			remoteInfo = ZovoDemoWidget;
+		};
+		A0D0E0000000000000000105 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A0D0E0000000000000000F00 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A0D0E0000000000000000102;
+			remoteInfo = ZovoDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A0D0E0000000000000000025 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A0D0E0000000000000000024 /* ZovoDemoWidget.appex in Embed Foundation Extensions */,
+			);
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		A0D0E0000000000000000001 /* ZovoDemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZovoDemoApp.swift; sourceTree = "<group>"; };
+		A0D0E0000000000000000002 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		A0D0E0000000000000000003 /* TripStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripStore.swift; sourceTree = "<group>"; };
+		A0D0E0000000000000000004 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A0D0E0000000000000000005 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A0D0E0000000000000000006 /* ZovoDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ZovoDemo.entitlements; sourceTree = "<group>"; };
+		A0D0E0000000000000000007 /* OldHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OldHelper.swift; sourceTree = "<group>"; };
+		A0D0E0000000000000000008 /* TripWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripWidget.swift; sourceTree = "<group>"; };
+		A0D0E0000000000000000009 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A0D0E000000000000000000A /* TripStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripStoreTests.swift; sourceTree = "<group>"; };
+		A0D0E000000000000000000B /* Base.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Base.xcconfig; sourceTree = "<group>"; };
+		A0D0E000000000000000000C /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
+		A0D0E000000000000000000D /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		A0D0E000000000000000000E /* ZovoDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZovoDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A0D0E000000000000000000F /* ZovoDemoWidget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ZovoDemoWidget.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		A0D0E0000000000000000010 /* ZovoDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZovoDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A0D0E0000000000000000021 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A0D0E0000000000000000020 /* OrderedCollections in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A0D0E000000000000000002B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A0D0E000000000000000002A /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A0D0E000000000000000002F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A0D0E0000000000000000011 /* Legacy */ = {
+			isa = PBXGroup;
+			children = (
+				A0D0E0000000000000000007 /* OldHelper.swift */,
+			);
+			name = Legacy;
+			sourceTree = "<group>";
+		};
+		A0D0E0000000000000000012 /* ZovoDemo */ = {
+			isa = PBXGroup;
+			children = (
+				A0D0E0000000000000000001 /* ZovoDemoApp.swift */,
+				A0D0E0000000000000000002 /* ContentView.swift */,
+				A0D0E0000000000000000003 /* TripStore.swift */,
+				A0D0E0000000000000000004 /* Assets.xcassets */,
+				A0D0E0000000000000000005 /* Info.plist */,
+				A0D0E0000000000000000006 /* ZovoDemo.entitlements */,
+				A0D0E0000000000000000011 /* Legacy */,
+			);
+			path = ZovoDemo;
+			sourceTree = "<group>";
+		};
+		A0D0E0000000000000000013 /* ZovoDemoWidget */ = {
+			isa = PBXGroup;
+			children = (
+				A0D0E0000000000000000008 /* TripWidget.swift */,
+				A0D0E0000000000000000009 /* Info.plist */,
+			);
+			path = ZovoDemoWidget;
+			sourceTree = "<group>";
+		};
+		A0D0E0000000000000000014 /* ZovoDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				A0D0E000000000000000000A /* TripStoreTests.swift */,
+			);
+			path = ZovoDemoTests;
+			sourceTree = "<group>";
+		};
+		A0D0E0000000000000000015 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				A0D0E000000000000000000B /* Base.xcconfig */,
+				A0D0E000000000000000000C /* Release.xcconfig */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		A0D0E0000000000000000016 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A0D0E000000000000000000D /* WidgetKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A0D0E0000000000000000017 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A0D0E000000000000000000E /* ZovoDemo.app */,
+				A0D0E000000000000000000F /* ZovoDemoWidget.appex */,
+				A0D0E0000000000000000010 /* ZovoDemoTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A0D0E0000000000000000018 = {
+			isa = PBXGroup;
+			children = (
+				A0D0E0000000000000000012 /* ZovoDemo */,
+				A0D0E0000000000000000013 /* ZovoDemoWidget */,
+				A0D0E0000000000000000014 /* ZovoDemoTests */,
+				A0D0E0000000000000000015 /* Config */,
+				A0D0E0000000000000000016 /* Frameworks */,
+				A0D0E0000000000000000017 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A0D0E0000000000000000101 /* ZovoDemoWidget */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A0D0E000000000000000003A /* Build configuration list for PBXNativeTarget "ZovoDemoWidget" */;
+			buildPhases = (
+				A0D0E0000000000000000029 /* Sources */,
+				A0D0E000000000000000002B /* Frameworks */,
+				A0D0E000000000000000002C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ZovoDemoWidget;
+			productName = ZovoDemoWidget;
+			productReference = A0D0E000000000000000000F /* ZovoDemoWidget.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		A0D0E0000000000000000102 /* ZovoDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A0D0E0000000000000000039 /* Build configuration list for PBXNativeTarget "ZovoDemo" */;
+			buildPhases = (
+				A0D0E0000000000000000026 /* Write build number */,
+				A0D0E000000000000000001F /* Sources */,
+				A0D0E0000000000000000021 /* Frameworks */,
+				A0D0E0000000000000000023 /* Resources */,
+				A0D0E0000000000000000025 /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A0D0E0000000000000000106 /* PBXTargetDependency */,
+			);
+			name = ZovoDemo;
+			packageProductDependencies = (
+				A0D0E000000000000000001A /* OrderedCollections */,
+			);
+			productName = ZovoDemo;
+			productReference = A0D0E000000000000000000E /* ZovoDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A0D0E0000000000000000103 /* ZovoDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A0D0E000000000000000003B /* Build configuration list for PBXNativeTarget "ZovoDemoTests" */;
+			buildPhases = (
+				A0D0E000000000000000002E /* Sources */,
+				A0D0E000000000000000002F /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A0D0E0000000000000000107 /* PBXTargetDependency */,
+			);
+			name = ZovoDemoTests;
+			productName = ZovoDemoTests;
+			productReference = A0D0E0000000000000000010 /* ZovoDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A0D0E0000000000000000F00 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1600;
+				LastUpgradeCheck = 1600;
+				ORGANIZATIONNAME = "Zovo Demo";
+			};
+			buildConfigurationList = A0D0E0000000000000000038 /* Build configuration list for PBXProject "ZovoDemo" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+				de,
+			);
+			mainGroup = A0D0E0000000000000000018;
+			packageReferences = (
+				A0D0E0000000000000000019 /* XCRemoteSwiftPackageReference "swift-collections" */,
+			);
+			productRefGroup = A0D0E0000000000000000017 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A0D0E0000000000000000102 /* ZovoDemo */,
+				A0D0E0000000000000000101 /* ZovoDemoWidget */,
+				A0D0E0000000000000000103 /* ZovoDemoTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A0D0E0000000000000000023 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A0D0E0000000000000000022 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A0D0E000000000000000002C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A0D0E0000000000000000026 /* Write build number */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/ZovoDemo/Info.plist",
+			);
+			name = "Write build number";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Writes the commit count as the build number\nbuild=$(git rev-list --count HEAD 2>/dev/null || echo 1)\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $build\" \"$TARGET_BUILD_DIR/$INFOPLIST_PATH\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A0D0E000000000000000001F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A0D0E000000000000000001B /* ZovoDemoApp.swift in Sources */,
+				A0D0E000000000000000001C /* ContentView.swift in Sources */,
+				A0D0E000000000000000001D /* TripStore.swift in Sources */,
+				A0D0E000000000000000001E /* OldHelper.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A0D0E0000000000000000029 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A0D0E0000000000000000027 /* TripWidget.swift in Sources */,
+				A0D0E0000000000000000028 /* TripStore.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A0D0E000000000000000002E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A0D0E000000000000000002D /* TripStoreTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A0D0E0000000000000000106 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A0D0E0000000000000000101 /* ZovoDemoWidget */;
+			targetProxy = A0D0E0000000000000000104 /* PBXContainerItemProxy */;
+		};
+		A0D0E0000000000000000107 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A0D0E0000000000000000102 /* ZovoDemo */;
+			targetProxy = A0D0E0000000000000000105 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		A0D0E0000000000000000030 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A0D0E000000000000000000B /* Base.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_TESTABILITY = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A0D0E0000000000000000031 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A0D0E000000000000000000C /* Release.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A0D0E0000000000000000032 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = ZovoDemo/ZovoDemo.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 12;
+				INFOPLIST_FILE = ZovoDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.4.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.zovodemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) DEMO_DATA";
+			};
+			name = Debug;
+		};
+		A0D0E0000000000000000033 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = ZovoDemo/ZovoDemo.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 12;
+				INFOPLIST_FILE = ZovoDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.4.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.zovodemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		A0D0E0000000000000000034 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 12;
+				INFOPLIST_FILE = ZovoDemoWidget/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.4.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.zovodemo.widget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		A0D0E0000000000000000035 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 12;
+				INFOPLIST_FILE = ZovoDemoWidget/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.4.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.zovodemo.widget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		A0D0E0000000000000000036 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				GENERATE_INFOPLIST_FILE = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.zovodemo.tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ZovoDemo.app/ZovoDemo";
+			};
+			name = Debug;
+		};
+		A0D0E0000000000000000037 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				GENERATE_INFOPLIST_FILE = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.zovodemo.tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ZovoDemo.app/ZovoDemo";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A0D0E0000000000000000038 /* Build configuration list for PBXProject "ZovoDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A0D0E0000000000000000030 /* Debug */,
+				A0D0E0000000000000000031 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A0D0E0000000000000000039 /* Build configuration list for PBXNativeTarget "ZovoDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A0D0E0000000000000000032 /* Debug */,
+				A0D0E0000000000000000033 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A0D0E000000000000000003A /* Build configuration list for PBXNativeTarget "ZovoDemoWidget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A0D0E0000000000000000034 /* Debug */,
+				A0D0E0000000000000000035 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A0D0E000000000000000003B /* Build configuration list for PBXNativeTarget "ZovoDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A0D0E0000000000000000036 /* Debug */,
+				A0D0E0000000000000000037 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A0D0E0000000000000000019 /* XCRemoteSwiftPackageReference "swift-collections" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-collections";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A0D0E000000000000000001A /* OrderedCollections */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A0D0E0000000000000000019 /* XCRemoteSwiftPackageReference "swift-collections" */;
+			productName = OrderedCollections;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = A0D0E0000000000000000F00 /* Project object */;
+}
